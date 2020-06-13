@@ -10,6 +10,7 @@ const jwtUtils = require('../../module/jwt');
 
 
 //body-email, password
+//로그인
 router.post('/', async(req, res) => {
     if (!req.body.email || !req.body.password) {
         res.status(200).send(util.successFalse(statusCode.BAD_REQUEST, resMessage.NULL_VALUE));
