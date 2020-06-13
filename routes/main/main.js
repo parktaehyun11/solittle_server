@@ -7,6 +7,7 @@ const db = require('../../module/pool');
 const authUtil = require("../../module/authUtils");
 
 //메인
+//메인 화면
 router.get('/',authUtil.isLoggedin, async(req, res)=>{
     const getCategoryQuery = 'SELECT DISTINCT category_name FROM category';
     const getCategoryResult = await db.queryParam_None(getCategoryQuery);
