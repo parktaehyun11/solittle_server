@@ -16,8 +16,6 @@ router.get('/:category_name', authUtil.isLoggedin, async(req, res)=>{
 
     const checkCategory_name = "SELECT category_name FROM category WHERE category_name = ?";
     const checkCategory_nameResult = await db.queryParam_Arr(checkCategory_name,[category_name]);
-    //console.log(checkCategory_nameResult[0].category_name);
-    //console.log(checkCategory_nameResult.category_name)
     
     const getMyVocaQuery = 'SELECT  * FROM myvoca WHERE user_idx =? and category_name =?';
     const getMyVocaResult = await db.queryParam_Arr(getMyVocaQuery , [useridx,category_name]);
