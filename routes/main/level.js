@@ -7,6 +7,7 @@ const db = require('../../module/pool');
 const authUtil = require("../../module/authUtils");
 
 //메인
+//퀴즈 레벨 선택
 router.get('/:category',authUtil.isLoggedin, async(req, res)=>{
     //const getCategoryQuery = 'SELECT level_idx FROM category';
     //const getCategoryResult = await db.queryParam_Parse(getCategoryQuery);
