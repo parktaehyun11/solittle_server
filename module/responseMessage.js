@@ -75,4 +75,6 @@ module.exports = {//서버들끼리의 원활한 소통을 위해서 응답메�
     //getmyvoca
     GET_MYVOCA_SUCCESS :"단어장 불러오기 성공",
     GET_MYVOCA_FAIL :"단어장 불러오기 실패",
+    
+    GET_CATEGORY_FAIL : "카테고리 이름 틀림",
 };

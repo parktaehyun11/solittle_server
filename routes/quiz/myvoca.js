@@ -21,8 +21,6 @@ router.get('/:voca_idx/:category_name/:level_idx', authUtil.isLoggedin, async(re
     console.log(useridx);
     
     const CheckNameQuery = "SELECT category_name FROM voca WHERE voca_idx =?"
-    
-    
     const ChecklevelQuery = "SELECT level_idx FROM voca WHERE voca_idx =?" 
     const GetNameResult = await db.queryParam_Arr(CheckNameQuery , [voca_idx]);
     const GetLevelResult = await db.queryParam_Arr(ChecklevelQuery , [voca_idx]);
