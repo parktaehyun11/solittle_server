@@ -11,7 +11,6 @@ const authUtil = require("../../module/authUtils");
 //메인ㅣ
 router.get('/:voca_idx/:category_name/:level_idx', authUtil.isLoggedin, async(req, res)=>{
     
-    //넘긴 
     const voca_idx = req.params.voca_idx;
     const category_name = req.params.category_name;
     const level_idx = req.params.level_idx;
