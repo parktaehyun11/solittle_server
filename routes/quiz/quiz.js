@@ -14,7 +14,8 @@ router.get('/:category/:level',authUtil.isLoggedin, async(req, res)=>{
     const level = req.params.level;
     const getQuizQuery = 'SELECT * FROM voca WHERE category_name = ? AND level_idx = ?';
     const getQuizResult = await db.queryParam_Arr(getQuizQuery,[category,level]);
-    //getQuizResult.length
+
+    
     if(getQuizResult.length == 0){
         res.status(200).send(util.successFalse(statusCode.DB_ERROR,resMessage.GET_QUIZ_FAIL));
     }
